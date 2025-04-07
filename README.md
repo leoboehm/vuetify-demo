@@ -1,12 +1,11 @@
 # Vuetify Demo Project
 
-This project demonstrates the integration and usage of **Vuetify 3** in a Vue 3 application using **Vite**. It showcases a minimal yet practical UI setup including a card, dialog, slider, progress bar, and a dark/light mode toggle.
+This project demonstrates the integration and usage of **Vuetify 3** in a **Vue 3** application using Vite. It showcases a minimal yet practical UI setup including a card, dialog, slider, progress bar, and a dark/light mode toggle.
 
 ## 📦 Tech Stack
 
 - [Vue 3](https://vuejs.org/)
 - [Vuetify 3](https://next.vuetifyjs.com/)
-- [Vite](https://vitejs.dev/)
 
 ---
 
@@ -23,6 +22,8 @@ Check if installed:
 node -v
 npm -v
 ```
+
+For the unlikely case that you do not have those installed, check out the [npm documentation](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm).
 
 ### ✅ Vue CLI (Usually optional for custom setups, but will be used to install Vuetify in the upcoming toturial)
 
@@ -69,7 +70,7 @@ If you wish to have a look at and experiment with the final project, you will fi
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/vuetify-demo.git
+git clone https://github.com/leoboehm/vuetify-demo.git
 cd vuetify-demo/demo-project
 ```
 
