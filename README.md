@@ -1,6 +1,6 @@
 # Vuetify Demo Project
 
-This project demonstrates the integration and usage of **Vuetify 3** in a **Vue 3** application using Vite. It showcases a minimal yet practical UI setup including a card, dialog, slider, progress bar, and a dark/light mode toggle.
+This project demonstrates the integration and usage of **Vuetify 3** in a **Vue 3** application. It showcases a minimal yet practical UI setup including a card, dialog, slider, progress bar, and a dark/light mode toggle.
 
 ## 📦 Tech Stack
 
