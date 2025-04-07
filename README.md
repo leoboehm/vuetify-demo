@@ -24,7 +24,7 @@ node -v
 npm -v
 ```
 
-### ✅ Vue CLI (Optional – for custom setups)
+### ✅ Vue CLI (Usually optional for custom setups, but will be used to install Vuetify in the upcoming toturial)
 
 Install globally using npm:
 
@@ -45,35 +45,32 @@ vue --version
 If you prefer to create your own project instead of using the demo out-of-the-box, follow these steps:
 
 ```bash
-vue create my-project
-cd my-project
-
-# Add Vuetify 3 via Vue CLI plugin
-vue add vuetify
+vue create demo-project
+cd demo-project
 ```
 
 During setup, choose:
 - Vue 3 preset
-- Vuetify 3 (not 2!)
-- Customize theme or use defaults
 
 Run your project:
 
 ```bash
 npm run serve
 ```
-Note: Vuetify 3 works only with Vue 3. Vue CLI must use Vue 3 as the base template.
 
 ---
 
 
 ## 🚀 Getting Started with the Demo Project
 
+The demo project will be used for the lecture, so it's pretty empty right now.<br>
+If you wish to have a look at and experiment with the final project, you will find this in the directory `demo-project-completed`.
+
 ### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/your-username/vuetify-demo.git
-cd vuetify-demo
+cd vuetify-demo/demo-project
 ```
 
 ### 2. Install Dependencies
@@ -82,13 +79,13 @@ cd vuetify-demo
 npm install
 ```
 
-### 3. Start the Development Server
+### 3. Start the Application Server
 
 ```bash
-npm run dev
+npm run serve
 ```
 
-The app will be available at `http://localhost:5173` by default.
+The app will be available at `http://localhost:8080` by default.
 
 ---
 
