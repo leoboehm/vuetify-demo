@@ -1,6 +1,6 @@
 # Vuetify Demo Project
 
-This project demonstrates the integration and usage of **Vuetify 3** in a **Vue 3** application. It showcases a minimal yet practical UI setup including a card, dialog, slider, progress bar, and a dark/light mode toggle.
+This project demonstrates the installation and usage of **Vuetify 3** in a **Vue 3** application. It showcases a minimal yet practical UI setup including a card, dialog, slider, progress bar, and a dark/light mode toggle.
 
 ## 📦 Tech Stack
 
@@ -24,40 +24,6 @@ npm -v
 ```
 
 For the unlikely case that you do not have those installed, check out the [npm documentation](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm).
-
-### ✅ Vue CLI (Usually optional for custom setups, but will be used to install Vuetify in the upcoming toturial)
-
-Install globally using npm:
-
-```bash
-npm install -g @vue/cli
-```
-
-Check version:
-
-```bash
-vue --version
-```
-
----
-
-
-## 📚 Setting up a Vue 3 + Vuetify 3 Project with Vue CLI (Alternative)
-If you prefer to create your own project instead of using the demo out-of-the-box, follow these steps:
-
-```bash
-vue create demo-project
-cd demo-project
-```
-
-During setup, choose:
-- Vue 3 preset
-
-Run your project:
-
-```bash
-npm run serve
-```
 
 ---
 
@@ -83,12 +49,39 @@ npm install
 ### 3. Start the Application Server
 
 ```bash
-npm run serve
+npm run dev
 ```
 
-The app will be available at `http://localhost:8080` by default.
+The app will be available at `http://localhost:3000` by default.
 
 ---
+
+## 📚 Setting up the Vue 3 + Vuetify 3 Project yourself directly via Vuetify (Alternative)
+If you prefer to create your own project instead of using the demo out-of-the-box, follow these steps:
+
+```bash
+npm create vuetify@latest
+```
+You will be asked to confirm the installation of `vuetify/create`, please confirm.
+
+During setup, choose:
+- Project name: demo-project
+- Preset: Barebones (Only Vue & Vuetify)
+- Use TypeScript: No
+- Dependency management: npm
+- Install Dependencies: Yes
+
+Run your project:
+
+```bash
+cd demo-project
+npm run dev
+```
+
+The app will be available at `http://localhost:3000` by default.
+
+---
+
 
 ## 🧩 Project Structure
 
