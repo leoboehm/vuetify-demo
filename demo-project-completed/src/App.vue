@@ -1,13 +1,23 @@
 <template>
   <v-app>
-    <v-main>
-      <HelloWorld />
-    </v-main>
+    <NavBar @toggleTheme="toggleTheme" />
 
-    <AppFooter />
+    <v-main>
+      <v-container fluid>
+        <HelloWorld />
+      </v-container>
+    </v-main>
   </v-app>
 </template>
 
 <script setup>
-  //
+import { useTheme } from "vuetify";
+import NavBar from "@/components/NavBar.vue";
+import HelloWorld from "@/components/ToDo.vue";
+
+const theme = useTheme();
+
+function toggleTheme() {
+  theme.global.name.value = theme.global.current.value.dark ? 'light' : 'dark'
+}
 </script>

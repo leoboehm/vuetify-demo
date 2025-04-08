@@ -88,9 +88,10 @@ The app will be available at `http://localhost:3000` by default.
 ```
 src/
 ├── components/
-│   ├── DemoCard.vue          # Vuetify card component
-│   ├── DialogExample.vue     # Simple Vuetify dialog
-│   └── ThemeToggle.vue       # Dark/light mode toggle switch
+│   ├── NavBar.vue            # Vuetify nav bar
+│   ├── TaskDialog.vue        # Simple Vuetify dialog to add a new To-Do
+|   ├── TaskCard.vue          # Simple Vuetify Card that displays a task
+│   └── DarkModeToggle.vue    # Dark/light mode toggle switch
 ├── App.vue                   # Main application layout
 └── main.js                   # Vuetify setup and app mounting
 ```
