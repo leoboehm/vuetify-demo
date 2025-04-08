@@ -1,6 +1,6 @@
 # Vuetify Demo Project
 
-This project demonstrates the installation and usage of **Vuetify 3** in a **Vue 3** application. It showcases a minimal yet practical UI setup including a card, dialog, slider, progress bar, and a dark/light mode toggle.
+This project demonstrates the usage of **Vuetify 3** in a **Vue 3** application by implementing a small To-Do list. It showcases a minimal yet practical UI setup including a navigation bar, card, dialog, progress bar, and a dark/light mode toggle.
 
 ## 📦 Tech Stack
 
@@ -89,56 +89,76 @@ The app will be available at `http://localhost:3000` by default.
 src/
 ├── components/
 │   ├── NavBar.vue            # Vuetify nav bar
-│   ├── TaskDialog.vue        # Simple Vuetify dialog to add a new To-Do
-|   ├── TaskCard.vue          # Simple Vuetify Card that displays a task
-│   └── DarkModeToggle.vue    # Dark/light mode toggle switch
+│   ├── Task/
+│   |   ├── TaskCard.vue      # Simple Vuetify card that displays a task
+│   |   ├── TaskDialog.vue    # Simple Vuetify dialog to add a new To-Do
+│   |   ├── TaskList.vue      # Simple list that displays the To-Do cards
+├── pages/
+│   ├── ToDo.vue              # Main page
+├── plugins/
+│   ├── index.js              # Plugin handling
+│   ├── vuetify.js            # Vuetify configuration
 ├── App.vue                   # Main application layout
-└── main.js                   # Vuetify setup and app mounting
+└── main.js                   # App mounting
 ```
 
 ---
 
 ## 🖥️ Features Demonstrated
 
-### ✅ Vuetify Integration
-- Vuetify is installed and initialized via `vite-plugin-vuetify`.
-- All components and directives are globally registered.
-
 ### ✅ Theming (Dark/Light Toggle)
 - Implemented using Vuetify's theme system.
-- Controlled via `ThemeToggle.vue` with a `v-switch`.
 
-```vue
-<v-switch v-model="isDark" label="Dark Mode" @change="toggleTheme" />
+```js
+const theme = useTheme();
+
+function toggleTheme() {
+  theme.global.name.value = theme.global.current.value.dark ? 'light' : 'dark'
+}
 ```
 
 ### ✅ Card Component
-- `DemoCard.vue` uses `v-card`, `v-img`, and `v-card-text`.
+- `TaskCard.vue` uses `v-card`, `v-card-title`, and `v-card-text`.
 
-```vue
-<v-card>
-  <v-img src="..." height="200px" cover></v-img>
-  <v-card-title>Vuetify Card</v-card-title>
-</v-card>
+```js
+  <v-card>
+    <v-card-title>Task Title</v-card-title>
+    <v-card-text>Task Description</v-card-text>
+  </v-card>
 ```
 
 ### ✅ Dialog Component
-- `DialogExample.vue` uses `v-dialog` and a `v-btn` to open it.
+- `TaskDialog.vue` uses `v-dialog` and a `v-btn` to open it.
 
-```vue
-<v-dialog v-model="dialog">
-  <template #activator="{ props }">
-    <v-btn v-bind="props">Open Dialog</v-btn>
-  </template>
-</v-dialog>
+```js
+    <v-btn @click="dialog = true">Add Task</v-btn>
+    <v-dialog v-model="dialog" persistent max-width="400px">
+      <v-card>
+        <v-card-title>Add New Task</v-card-title>
+        <v-card-text>
+          <v-text-field v-model="title" label="Task" autofocus />
+          <v-text-field v-model="text" label="Description (Optional)" />
+        </v-card-text>
+        <v-card-actions>
+          <v-spacer />
+          <v-btn text @click="dialog = false">Cancel</v-btn>
+          <v-btn color="success" @click="addTask">Add</v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
 ```
 
-### ✅ Progress Bar + Slider
-- `App.vue` uses a `v-slider` to control the value of a `v-progress-linear`.
+### ✅ Progress Bar
+- `ToDo.vue` uses a `v-progress-linear` to show the progress of completed tasks.
 
-```vue
-<v-slider v-model="progress" max="100" />
-<v-progress-linear :model-value="progress" />
+```js
+    <v-progress-linear
+      :model-value="completionRate"
+      height="40"
+      color="green"
+    >
+      <strong>Tasks completed: {{ completionRate }}%</strong>
+    </v-progress-linear>
 ```
 
 ---
