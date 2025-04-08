@@ -106,17 +106,6 @@ src/
 
 ## 🖥️ Features Demonstrated
 
-### ✅ Theming (Dark/Light Toggle)
-- Implemented using Vuetify's theme system.
-
-```js
-const theme = useTheme();
-
-function toggleTheme() {
-  theme.global.name.value = theme.global.current.value.dark ? 'light' : 'dark'
-}
-```
-
 ### ✅ Card Component
 - `TaskCard.vue` uses `v-card`, `v-card-title`, and `v-card-text`.
 
@@ -159,6 +148,17 @@ function toggleTheme() {
     >
       <strong>Tasks completed: {{ completionRate }}%</strong>
     </v-progress-linear>
+```
+
+### ✅ Theming (Dark/Light Toggle)
+- Implemented using Vuetify's theme system.
+
+```js
+const theme = useTheme();
+
+function toggleTheme() {
+  theme.global.name.value = theme.global.current.value.dark ? 'light' : 'dark'
+}
 ```
 
 ---
