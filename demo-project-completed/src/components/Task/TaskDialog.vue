@@ -18,7 +18,7 @@
         <v-card-actions>
           <v-spacer />
           <v-btn text @click="dialog = false">Cancel</v-btn>
-          <v-btn color="success" @click="handleAdd">Add</v-btn>
+          <v-btn color="success" @click="addTask">Add</v-btn>
         </v-card-actions>
       </v-card>
     </v-dialog>
@@ -32,7 +32,7 @@ const title = ref("");
 const text = ref("");
 const emit = defineEmits(["add-task"]);
 
-function handleAdd() {
+function addTask() {
   if (title.value.trim()) {
     emit("add-task", title.value.trim(), text.value.trim());
     title.value = "";

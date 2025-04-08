@@ -13,7 +13,7 @@
 <script setup>
 import { useTheme } from "vuetify";
 import NavBar from "@/components/NavBar.vue";
-import HelloWorld from "@/components/ToDo.vue";
+import HelloWorld from "@/pages/ToDo.vue";
 
 const theme = useTheme();
 
