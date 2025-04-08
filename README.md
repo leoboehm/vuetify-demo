@@ -120,7 +120,7 @@ function toggleTheme() {
 ### ✅ Card Component
 - `TaskCard.vue` uses `v-card`, `v-card-title`, and `v-card-text`.
 
-```js
+```vue
   <v-card>
     <v-card-title>Task Title</v-card-title>
     <v-card-text>Task Description</v-card-text>
@@ -130,7 +130,7 @@ function toggleTheme() {
 ### ✅ Dialog Component
 - `TaskDialog.vue` uses `v-dialog` and a `v-btn` to open it.
 
-```js
+```vue
     <v-btn @click="dialog = true">Add Task</v-btn>
     <v-dialog v-model="dialog" persistent max-width="400px">
       <v-card>
@@ -151,7 +151,7 @@ function toggleTheme() {
 ### ✅ Progress Bar
 - `ToDo.vue` uses a `v-progress-linear` to show the progress of completed tasks.
 
-```js
+```vue
     <v-progress-linear
       :model-value="completionRate"
       height="40"
