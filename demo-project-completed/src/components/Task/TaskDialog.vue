@@ -8,12 +8,12 @@
     >
       Add Task
     </v-btn>
-    <v-dialog v-model="dialog" persistent max-width="400px">
-      <v-card>
+    <v-dialog v-model="dialog" persistent max-width="800px">
+      <v-card class="pa-2 pt-4">
         <v-card-title>Add New Task</v-card-title>
         <v-card-text>
           <v-text-field v-model="title" label="Task" autofocus />
-          <v-text-field v-model="text" label="Description (Optional)" />
+          <v-textarea rows="2" auto-grow v-model="text" label="Description (Optional)" />
         </v-card-text>
         <v-card-actions>
           <v-spacer />
