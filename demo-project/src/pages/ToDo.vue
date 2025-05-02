@@ -1,4 +1,5 @@
 <template>
+  Hello, this will soon be a ToDo List!
   <!-- TODO: Implement main page! -->
 </template>
 
